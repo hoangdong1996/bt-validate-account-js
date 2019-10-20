@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra account</title>
+</head>
+<body>
+<script>
+    function isAccount(str) {
+        let regexp = /^[_a-z0-9]{6,}$/;
+        if (regexp.test(str)) {
+            return true;
+        }
+        return false;
+    }
+    let account = prompt("Nhập account cần kiểm tra ");
+    if (isAccount(account)) {
+        alert("account hợp lệ");
+    } else {
+        alert("account không hợp lệ");
+    }
+</script>
+</body>
+</html>
